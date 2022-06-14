@@ -14,3 +14,12 @@ for d in data:
 	sum_len += len(d)
 	# print(sum_len)
 print('每筆留言的平均長度是', sum_len / len(data))
+
+new = [d for d in data if len(d) < 100]
+print('一共有', len(new) , '筆留言長度小於100')
+
+good = [d for d in data if 'good' in d]
+print('一共有', len(good) , '筆留言提到good')
+
+bad = ['good' in d for d in data]
+print(bad)
